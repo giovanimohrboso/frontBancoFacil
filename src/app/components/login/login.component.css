@@ -9,6 +9,16 @@
   background-color: aqua;
 }
 
+.container__texto{
+  display: flex;
+  flex-direction: column;
+}
+
+.container__botao{
+  display: flex;
+  flex-direction: row;
+}
+
 .form__login{
   display: flex;
   flex-direction: column;
@@ -22,7 +32,7 @@
 }
 
 .botao{
-  width: 80px;
+  width: 100px;
   margin: 5px;
 }
 

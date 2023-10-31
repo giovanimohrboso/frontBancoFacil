@@ -1,9 +1,26 @@
 <div class="container__login">
   <h1>Entrar</h1>
-  <div class="form__login">
-    <input type="text" placeholder="Usuario" class="campo" [(ngModel)]="usuario">
-    <input type="text" placeholder="Senha" class="campo" [(ngModel)]="senha">
-    <input type="button" value="Entrar" class="botao" (click)="conectar()">
-    <input type="button" value="Cadastrar" class="botao">
-  </div>
+  <ng-template class="form__login" [ngIf]="!habilitaCadastro" >
+    <div class="container__texto">
+      <input type="text" placeholder="Usuario" class="campo" [(ngModel)]="usuario">
+      <input type="text" placeholder="Senha" class="campo" [(ngModel)]="senha">
+    </div>
+    <div class="container__botao">
+      <input type="button" value="Login" class="botao" (click)="conectar()">
+      <input type="button" value="Novo Cadastro" class="botao" (click)="habilitarCadastro(true)">
+    </div>
+  </ng-template>
+  <ng-template class="form__cadastro" [ngIf]="habilitaCadastro">
+    <div class="container__texto">
+      <input type="text" placeholder="CPF" class="campo" [(ngModel)]="cpfCnpj">
+      <input type="text" placeholder="Nome" class="campo" [(ngModel)]="nome">
+      <input type="text" placeholder="Email" class="campo" [(ngModel)]="email">
+      <input type="text" placeholder="Senha" class="campo" [(ngModel)]="senha">
+    </div>
+    <div class="container__botao">
+      <input type="button" value="Login" class="botao" (click)="habilitarCadastro(false)">
+      <input type="button" value="Cadastrar" class="botao" (click)="cadastrar()" >
+    </div>
+  </ng-template>
+
 </div>
