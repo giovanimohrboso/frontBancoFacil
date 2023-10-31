@@ -1,0 +1,19 @@
+.container__cabecalho{
+  width: 100vh;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  background-color: aqua;
+  border: solid blue 2px;
+}
+
+.container__cabecalho > img{
+  width: 120px;
+  height: 120px;
+}
+
+.container__cabecalho > p{
+  font-size: 50px;
+}
