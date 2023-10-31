@@ -1,9 +1,9 @@
 <div class="container__login">
   <h1>Entrar</h1>
   <div class="form__login">
-    <input type="text" placeholder="Usuario" class="campo">
-    <input type="text" placeholder="Senha" class="campo">
-    <input type="button" value="Entrar" class="botao">
+    <input type="text" placeholder="Usuario" class="campo" [(ngModel)]="usuario">
+    <input type="text" placeholder="Senha" class="campo" [(ngModel)]="senha">
+    <input type="button" value="Entrar" class="botao" (click)="conectar()">
     <input type="button" value="Cadastrar" class="botao">
   </div>
 </div>
